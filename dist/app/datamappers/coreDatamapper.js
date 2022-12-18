@@ -72,4 +72,4 @@ class CoreDataMapper {
     }
 }
 export { CoreDataMapper };
-//# sourceMappingURL=coreDataMapper.js.map
+//# sourceMappingURL=coreDatamapper.js.map

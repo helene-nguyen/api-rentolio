@@ -11,7 +11,8 @@ const logger = debug('ErrorHandling');
 /**
  * Manage error
  */
-function errorLoggerHandling(message, req) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function errorLoggerHandling(message, req, res) {
     const actualDate = new Date();
     // format error message : Date + url + message
     const logMessage = `${actualDate.toLocaleString()} - ${req.url} - ${message}\r`;

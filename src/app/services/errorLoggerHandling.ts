@@ -1,6 +1,6 @@
 //~import modules
 import { formattedDate } from '../utils/formattedDate.js';
-import { Request } from 'express';
+import { Request, Response } from 'express';
 import * as fs from 'fs';
 
 //~ resolve __dirname
@@ -14,7 +14,8 @@ const logger = debug('ErrorHandling');
 /**
  * Manage error
  */
-function errorLoggerHandling(message: string, req: Request) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function errorLoggerHandling(message: string, req: Request, res: Response) {
   const actualDate = new Date();
 
   // format error message : Date + url + message
