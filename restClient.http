@@ -1,0 +1,53 @@
+@entryPoint = http://localhost:4100/api/v1
+
+#~ ------------------------------------------ Entrypoint
+GET {{entryPoint}}
+
+###
+#~ ------------------------------------------ User
+POST {{entryPoint}}/users
+Content-Type: application/json
+
+{
+    "name": "alpha",
+    "password": "alpha"
+}
+
+# test with another session on Insomnia
+
+#~ ------------------------------------------ Rentals
+###
+GET {{entryPoint}}/rentals
+
+###
+POST {{entryPoint}}/rentals
+Content-Type: application/json
+
+{
+    "vehicle_id": 6,
+    "option" : 3
+}
+
+###
+PATCH {{entryPoint}}/rentals/1
+Content-Type: application/json
+
+{
+    "option": 1
+}
+
+###
+PATCH {{entryPoint}}/rentals/1
+Content-Type: application/json
+
+{
+    "vehicle_id": 6
+}
+
+###
+DELETE {{entryPoint}}/rentals/6
+Content-Type: application/json
+
+#~ ------------------------------------------ Vehicles
+###
+GET {{entryPoint}}/vehicles
