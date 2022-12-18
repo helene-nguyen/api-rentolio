@@ -1,7 +1,7 @@
 //~ Import modules
 import pg from 'pg';
 import client from '../database/connect.js';
-import { CoreDataMapper } from './coreDataMapper.js';
+import { CoreDataMapper } from './coreDatamapper.js';
 
 class UserDataMapper extends CoreDataMapper {
     tableName = 'user';

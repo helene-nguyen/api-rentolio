@@ -11,7 +11,7 @@ const logger = debug('ErrorHandling');
 /**
  * Manage error
  */
-function errorLoggerHandling(message, req, res) {
+function errorLoggerHandling(message, req) {
     const actualDate = new Date();
     // format error message : Date + url + message
     const logMessage = `${actualDate.toLocaleString()} - ${req.url} - ${message}\r`;

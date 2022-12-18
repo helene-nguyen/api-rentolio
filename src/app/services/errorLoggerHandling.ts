@@ -1,6 +1,6 @@
 //~import modules
 import { formattedDate } from '../utils/formattedDate.js';
-import { Request, Response } from 'express';
+import { Request } from 'express';
 import * as fs from 'fs';
 
 //~ resolve __dirname
@@ -14,7 +14,7 @@ const logger = debug('ErrorHandling');
 /**
  * Manage error
  */
-function errorLoggerHandling(message: string, req: Request, res: Response) {
+function errorLoggerHandling(message: string, req: Request) {
   const actualDate = new Date();
 
   // format error message : Date + url + message

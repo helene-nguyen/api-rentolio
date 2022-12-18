@@ -1,6 +1,6 @@
 //~ Import modules
 import client from '../database/connect.js';
-import { CoreDataMapper } from './coreDataMapper.js';
+import { CoreDataMapper } from './coreDatamapper.js';
 
 class VehicleDataMapper extends CoreDataMapper {
     tableName = 'vehicle';
