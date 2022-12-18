@@ -1,9 +1,10 @@
 # Change if needed the port number
 
 alldata:
+# Windows
 	psql -U postgres -p 5433 -f ./data/migration.sql
 	psql -U postgres -p 5433 -f ./data/seed.sql
-	# remove "#" for Linux
+# remove "#" for Linux
 	# sudo -iu postgres psql -p 5434 -f /home/yumicode/Desktop/api-rentals/data/migration.sql
 	# sudo -iu postgres psql -p 5434 -f /home/yumicode/Desktop/api-rentals/data/migration.sql
 
