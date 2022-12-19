@@ -108,16 +108,15 @@ RETURNS TRIGGER AS $rental_tg$
     END;
 $rental_tg$ LANGUAGE plpgsql;
 
+-- DROP TRIGGER rental_tg ON rental;
+
+CREATE TRIGGER rental_tg 
+BEFORE INSERT OR DELETE ON rental
+FOR EACH ROW EXECUTE FUNCTION rental_tg();
 
 --========================================
 -- Create trigger on rental table update
 --========================================
-
--- DROP TRIGGER rental_tg ON rental;
-
-CREATE TRIGGER rental_tg 
-BEFORE INSERT OR DELETE OR UPDATE ON rental
-FOR EACH ROW EXECUTE FUNCTION rental_tg();
 
 CREATE OR REPLACE FUNCTION rental_update_tg() 
 RETURNS TRIGGER AS $rental_update_tg$

@@ -5,7 +5,7 @@ GET {{entryPoint}}
 
 ###
 #~ ------------------------------------------ User
-POST {{entryPoint}}/users
+POST {{entryPoint}}/users/signin
 Content-Type: application/json
 
 {
